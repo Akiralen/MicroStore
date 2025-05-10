@@ -14,7 +14,7 @@ namespace SecurityAPI.Controllers
         {
             var users = await context.Users.ToListAsync();
             
-            if (users == null || !users.Any())
+            if (users == null || users.Count == 0)
             {
                 return NotFound("No users found.");
             }
